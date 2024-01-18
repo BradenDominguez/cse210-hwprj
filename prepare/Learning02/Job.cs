@@ -1,0 +1,14 @@
+using System;
+
+public class Job
+{
+    public string _jobTitle;
+    public string _company;
+    public int _startYear;
+    public int _endYear;
+
+    public void Display()
+    {
+        Console.WriteLine($"Job Title: {_jobTitle} ({_company}), From: {_startYear}-{_endYear}");
+    }
+}
