@@ -8,7 +8,7 @@ class Menu
     string content = "";
     do
     {
-        Console.WriteLine("");
+        Console.Clear();
         Console.WriteLine("Please enter a number.");
         Console.WriteLine("1.Load Journal");
         Console.WriteLine("2.Display Journal");
