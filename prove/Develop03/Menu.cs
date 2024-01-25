@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-// I brought back the menu for more options, like writing your own verses or loading one from a file.
 class Menu
 {
     public static void Initialize()
