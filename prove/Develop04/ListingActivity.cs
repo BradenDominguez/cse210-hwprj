@@ -3,24 +3,28 @@ using System.Threading;
 
 public class ListingActivity : Activity
 {
-    private string _count;
-    private List<string> _prompts;
-    ListingActivity(string name, string description, int duration, string count, List<string> prompts) : base(name, description, duration)
+    public ListingActivity(string name, string description, int duration) : base(name, description, duration)
     {
-        _count = count;
-        _prompts = prompts;
     }
-    void Run()
+    public void Run()
     {
-        Console.Write("List good things that relate to the following prompt:");
+        GetRandomPrompt();
+        ShowSpinner(3);
+        GetListFromUser();
     }
     void GetRandomPrompt()
     {
-        Console.WriteLine(Prompt.GetPrompt());
+        Console.WriteLine(ListPrompts.GetQuestion());
     }
     List<string> GetListFromUser()
     {
-        List<string> words = new List<string>();
-        return words;
+        string assert;
+        Console.WriteLine("\nWrite as many words as you can that relate, or exit to stop:");
+        List<string> Responses = new List<string>();
+        do{
+        assert = (Console.ReadLine()).ToString();
+        Responses.Add(assert);
+        }while (assert != "exit");
+        return Responses;
     }
 }

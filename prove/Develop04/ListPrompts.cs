@@ -1,7 +1,7 @@
-class Question
+class ListPrompts
 {
     
-    private static List<string> Questions = new List<string> { "How did it make you feel?", "What was the last interaction you had?", "When is the last time you saw it?"};
+    private static List<string> Questions = new List<string> { "Who are people that you appreciate?", "What are personal strengths of yours?", "Who are people that you have helped this week?"};
     private static Random randomGenerator = new Random();
     public static string GetQuestion()
     {

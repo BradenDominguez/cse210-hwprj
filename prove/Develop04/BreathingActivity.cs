@@ -8,16 +8,13 @@ public class BreathingActivity : Activity
     }
     public void Run()
     {
-        Console.WriteLine("This activity will help you breathe. How many seconds do you want to breathe?");
-        int seconds = int.Parse(Console.ReadLine());
-        for (int i = seconds; i > 0; i--)
+        for (int i = _duration; i > 0; i--)
         {
-            Console.Write("Breathe In  ");
+            Console.WriteLine("Breathe In  ");
             Thread.Sleep(500);
-            
-            Console.Write("Breathe Out ");
+            Console.WriteLine("Breathe Out ");
             Thread.Sleep(500);
-            Console.Write("           ");
+            Console.WriteLine("           ");
         }
         Console.WriteLine("You really breathed good.");
     }

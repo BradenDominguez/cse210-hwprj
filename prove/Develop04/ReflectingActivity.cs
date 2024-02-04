@@ -1,35 +1,34 @@
-using System;
-using System.Threading;
-
 public class ReflectingActivity : Activity
 {
-    private List<string> _prompts;
-    private List<string> _questions;
-    ReflectingActivity(string name, string description, int duration, List<string> prompts, List<string> questions) : base(name, description, duration)
+    public ReflectingActivity(string name, string description, int duration) : base(name, description, duration)
     {
-        _prompts = prompts;
-        _questions = questions;
     }
-    void Run()
+    public void Run()
     {
-        
+        GetRandomPrompt();
+        ShowSpinner(3);
+        GetRandomQuestion();
+        GetResponse();
     }
-    string GetRandomPrompt()
+    void GetRandomPrompt()
     {
         string prompt = Prompt.GetPrompt();
-        return prompt;
+        Console.WriteLine($"Think of a time involving {prompt.ToLower()}");
     }
-     string GetRandomQuestion()
+    void GetRandomQuestion()
     {
         string question = Question.GetQuestion();
-        return question;
+        Console.WriteLine($"\n{question}");
     }
-    void DisplayPrompt()
+    List<string> GetResponse()
     {
-        // Console.WriteLine(prompt);
-    }
-    void DisplayQuestion()
-    {
-        // Console.WriteLine(question);
+        string assert;
+        Console.WriteLine("Write your responses, or exit to stop:");
+        List<string> Responses = new List<string>();
+        do{
+        assert = (Console.ReadLine()).ToString();
+        Responses.Add(assert);
+        }while (assert != "exit");
+        return Responses;
     }
 }

@@ -1,8 +1,8 @@
 public class Activity
 {
-    private string _name;
-    private string _description;
-    private int _duration;
+    protected string _name;
+    protected string _description;
+    protected int _duration;
     public Activity(string name, string description, int duration)
     {
         _name = name;
@@ -11,13 +11,13 @@ public class Activity
     }
     public void DisplayStartingMessage()
     {
-        Console.WriteLine("Welcome to this activity.");
+        Console.WriteLine($"Welcome to this activity, {_name}. {_description}");
     }
-    void DisplayEndingMessage()
+    public void DisplayEndingMessage()
     {
-        Console.WriteLine("Back to the menu.");
+        Console.WriteLine("Activity completed. Returning back to the menu.");
     }
-    void ShowSpinner(int seconds)
+    public void ShowSpinner(int seconds)
     {
         List<string> Animation = new List<string>();
         Animation.Add("|");
@@ -27,7 +27,7 @@ public class Activity
         foreach (string s in Animation)
         {
             Console.Write(s);
-            Thread.Sleep(1000);
+            Thread.Sleep(seconds*1000);
             Console.Write("\b \b");
         }
     }
