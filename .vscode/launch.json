@@ -11,7 +11,7 @@
             "program": "${workspaceFolder}/sandbox/Sandbox/bin/Debug/net7.0/Sandbox.dll",
             "args": [],
             "cwd": "${workspaceFolder}/sandbox/Sandbox",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -24,7 +24,7 @@
             "program": "${workspaceFolder}/csharp-prep/Prep1/bin/Debug/net7.0/Prep1.dll",
             "args": [],
             "cwd": "${workspaceFolder}/csharp-prep/Prep1",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -37,7 +37,7 @@
             "program": "${workspaceFolder}/csharp-prep/Prep2/bin/Debug/net7.0/Prep2.dll",
             "args": [],
             "cwd": "${workspaceFolder}/csharp-prep/Prep2",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -50,7 +50,7 @@
             "program": "${workspaceFolder}/csharp-prep/Prep3/bin/Debug/net7.0/Prep3.dll",
             "args": [],
             "cwd": "${workspaceFolder}/csharp-prep/Prep3",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -63,7 +63,7 @@
             "program": "${workspaceFolder}/csharp-prep/Prep4/bin/Debug/net7.0/Prep4.dll",
             "args": [],
             "cwd": "${workspaceFolder}/csharp-prep/Prep4",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -76,7 +76,7 @@
             "program": "${workspaceFolder}/csharp-prep/Prep5/bin/Debug/net7.0/Prep5.dll",
             "args": [],
             "cwd": "${workspaceFolder}/csharp-prep/Prep5",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -89,7 +89,7 @@
             "program": "${workspaceFolder}/prepare/Learning02/bin/Debug/net7.0/Learning02.dll",
             "args": [],
             "cwd": "${workspaceFolder}/prepare/Learning02",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -102,7 +102,7 @@
             "program": "${workspaceFolder}/prepare/Learning03/bin/Debug/net7.0/Learning03.dll",
             "args": [],
             "cwd": "${workspaceFolder}/prepare/Learning03",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -115,7 +115,7 @@
             "program": "${workspaceFolder}/prepare/Learning04/bin/Debug/net7.0/Learning04.dll",
             "args": [],
             "cwd": "${workspaceFolder}/prepare/Learning04",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -128,7 +128,7 @@
             "program": "${workspaceFolder}/prepare/Learning05/bin/Debug/net7.0/Learning05.dll",
             "args": [],
             "cwd": "${workspaceFolder}/prepare/Learning05",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -141,7 +141,7 @@
             "program": "${workspaceFolder}/prove/Develop02/bin/Debug/net7.0/Develop02.dll",
             "args": [],
             "cwd": "${workspaceFolder}/prove/Develop02",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -154,7 +154,7 @@
             "program": "${workspaceFolder}/prove/Develop03/bin/Debug/net7.0/Develop03.dll",
             "args": [],
             "cwd": "${workspaceFolder}/prove/Develop03",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -167,7 +167,7 @@
             "program": "${workspaceFolder}/prove/Develop04/bin/Debug/net7.0/Develop04.dll",
             "args": [],
             "cwd": "${workspaceFolder}/prove/Develop04",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -180,7 +180,7 @@
             "program": "${workspaceFolder}/prove/Develop05/bin/Debug/net7.0/Develop05.dll",
             "args": [],
             "cwd": "${workspaceFolder}/prove/Develop05",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -193,7 +193,7 @@
             "program": "${workspaceFolder}/final/FinalProject/bin/Debug/net7.0/FinalProject.dll",
             "args": [],
             "cwd": "${workspaceFolder}/final/FinalProject",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -206,7 +206,7 @@
             "program": "${workspaceFolder}/final/Foundation1/bin/Debug/net7.0/Foundation1.dll",
             "args": [],
             "cwd": "${workspaceFolder}/final/Foundation1",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -219,7 +219,7 @@
             "program": "${workspaceFolder}/final/Foundation2/bin/Debug/net7.0/Foundation2.dll",
             "args": [],
             "cwd": "${workspaceFolder}/final/Foundation2",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -232,7 +232,7 @@
             "program": "${workspaceFolder}/final/Foundation3/bin/Debug/net7.0/Foundation3.dll",
             "args": [],
             "cwd": "${workspaceFolder}/final/Foundation3",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
@@ -245,7 +245,7 @@
             "program": "${workspaceFolder}/final/Foundation4/bin/Debug/net7.0/Foundation4.dll",
             "args": [],
             "cwd": "${workspaceFolder}/final/Foundation4",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
