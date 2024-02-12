@@ -1,0 +1,7 @@
+Name,GoalType,Description,Completion,Score
+1,Eternal,never ends,not done,0
+2,Simple,done once,Finished on 2/11/2024 6:36:01 PM,1000
+3,Checklist,do x times,3/10,150
+test,Eternal,a new goal,Not started,0
+checktest,Checklist,trying out checklist,Finished on 2/11/2024 7:10:31 PM,600
+newest,Eternal,final,Your last mark is 2/11/2024 8:13:34 PM,100
