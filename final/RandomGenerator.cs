@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-
 class RandomGenerator
 {
     private HashSet<int> generatedNumbers = new HashSet<int>();
@@ -16,20 +15,5 @@ class RandomGenerator
 
         generatedNumbers.Add(number); // Add the number to the set of generated numbers
         return number;
-    }
-}
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        RandomGenerator randomGenerator = new RandomGenerator();
-
-        // Generate 10 unique random numbers
-        for (int i = 0; i < 10; i++)
-        {
-            int randomNumber = randomGenerator.NextUniqueNumber();
-            Console.WriteLine($"Random number {i + 1}: {randomNumber}");
-        }
     }
 }

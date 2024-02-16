@@ -4,7 +4,8 @@ public class GoalMenu
     public GoalMenu()
     {
         _goals = new Dictionary<string, List<string>>();
-        string content = FileReader.ReadFile(@"D:\Projects\Programming\C#\CSE210\cse210-hwprj\prove\Develop05\Goals.csv");    
+        Console.WriteLine("Load from where? (Type path to Goals.csv)");
+        string content = FileReader.ReadFile(Console.ReadLine());    
         _goals = CSV.CSVToDict(_goals, content);
     }
     public void SetGoals(Dictionary<string, List<string>> goals)
