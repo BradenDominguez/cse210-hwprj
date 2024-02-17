@@ -4,11 +4,11 @@ class Program
     {
         List<List<string>> mainMenu = new List<List<string>>();
         mainMenu.Add(new List<string> {"Classic", "Program", "LoadClassic"});
-        mainMenu.Add(new List<string> {"Sleuth", "", "Display"});
-        mainMenu.Add(new List<string> {"Trait", "", "Score"});
-        mainMenu.Add(new List<string> {"Cursed Object", "", "Mark"});
+        // mainMenu.Add(new List<string> {"Sleuth", "", "Display"});
+        // mainMenu.Add(new List<string> {"Trait", "", "Score"});
+        // mainMenu.Add(new List<string> {"Cursed Object", "", "Mark"});
         mainMenu.Add(new List<string> {"List", "Ghosts", "List"});
-        mainMenu.Add(new List<string> {"Records", "", "Save"});
+        // mainMenu.Add(new List<string> {"Records", "", "Save"});
         mainMenu.Add(new List<string> {"Quit", "BasicMenu", "End"});
         BasicMenu.Initialize(mainMenu, "false");
     }
