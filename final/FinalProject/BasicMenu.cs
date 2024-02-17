@@ -1,7 +1,7 @@
 using System.Reflection;
 class BasicMenu
 {
-    public static string Initialize(List<List<string>> list)
+    public static string Initialize(List<List<string>> list, string runOnce)
     {
         Dictionary<string, List<string>> options = ToDict(list);
         string menu = "0";
@@ -21,7 +21,6 @@ class BasicMenu
                 string className = options[menu][1];
                 string methodName = options[menu][2];
                 results = methodName;
-                string runOnce = options[menu][3];
                 Type classType = Type.GetType(className);
                 MethodInfo methodInfo = classType.GetMethod(methodName);
                 if (methodInfo != null)
@@ -59,6 +58,6 @@ class BasicMenu
     }
     public static void End()
     {
-        Console.WriteLine($"Returning to previous menu.");
+        Console.WriteLine($"Proceeding...");
     }
 }

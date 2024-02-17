@@ -69,7 +69,7 @@ class Ghosts
         ghosts[key].Add(JinnEvidence);
         List<string> JinnSanityLevel = new List<string> {"50", "50"};
         ghosts[key].Add(JinnSanityLevel);
-        List<string> JinnSpeed = new List<string> {"1.7/2.5", "2.7"};
+        List<string> JinnSpeed = new List<string> {"1.7", "2.5", "1.7/2.5"};
         ghosts[key].Add(JinnSpeed);
         List<string> JinnTrait = new List<string> {"Speed", "Interaction", "Sanity", "Prevention"};
         ghosts[key].Add(JinnTrait);
@@ -91,7 +91,7 @@ class Ghosts
         ghosts[key].Add(MoroiEvidence);
         List<string> MoroiSanityLevel = new List<string> {"50", "50"};
         ghosts[key].Add(MoroiSanityLevel);
-        List<string> MoroiSpeed = new List<string> {"1.5-2.25", "3.71"};
+        List<string> MoroiSpeed = new List<string> {"1.5", "3.71", "1.5-2.25"};
         ghosts[key].Add(MoroiSpeed);
         List<string> MoroiTrait = new List<string> {"Sanity", "Speed", "Prevention", "None"};
         ghosts[key].Add(MoroiTrait);
@@ -179,7 +179,7 @@ class Ghosts
         ghosts[key].Add(RevenantEvidence);
         List<string> RevenantSanityLevel = new List<string> {"50", "50"};
         ghosts[key].Add(RevenantSanityLevel);
-        List<string> RevenantSpeed = new List<string> {"1/3", "3"};
+        List<string> RevenantSpeed = new List<string> {"1", "3", "1/3"};
         ghosts[key].Add(RevenantSpeed);
         List<string> RevenantTrait = new List<string> {"Roam", "Speed", "None", "None"};
         ghosts[key].Add(RevenantTrait);
@@ -234,7 +234,7 @@ class Ghosts
         ghosts[key].Add(TwinsEvidence);
         List<string> TwinsSanityLevel = new List<string> {"50", "50"};
         ghosts[key].Add(TwinsSanityLevel);
-        List<string> TwinsSpeed = new List<string> {"1.53/1.87", "2.5"};
+        List<string> TwinsSpeed = new List<string> {"1.53", "2.5", "1.53/1.87"};
         ghosts[key].Add(TwinsSpeed);
         List<string> TwinsTrait = new List<string> {"Interaction", "Speed", "None", "None"};
         ghosts[key].Add(TwinsTrait);
