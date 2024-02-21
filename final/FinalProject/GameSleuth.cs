@@ -3,13 +3,13 @@ using System.Data;
 using System.Runtime.InteropServices;
 using System.Security.Policy;
 
-class GameClassic : Game
+class GameSleuth : Game
 {
     protected string _evidenceSetting;
     protected string _huntSetting;
     protected string _speedSetting;
     protected string _traitSetting;
-    public GameClassic(Dictionary<string, List<List<string>>> ghosts, string ghost) : base(ghosts, ghost)
+    public GameSleuth(Dictionary<string, List<List<string>>> ghosts, string ghost) : base(ghosts, ghost)
     {
     _evidenceSetting = "3";
     _huntSetting = "1";
@@ -76,7 +76,7 @@ class GameClassic : Game
         }
         _ghosts[_ghost][0] = Evidence;
     }
-public void setHunt(){
+    public void setHunt(){
         Console.WriteLine("Input a number:");
         Console.WriteLine("1. Enabled");
         Console.WriteLine("2. Disabled");
@@ -197,7 +197,8 @@ public void setHunt(){
     {
         Settings();
         Console.WriteLine($"The ghost is {_ghost}");
-        Console.WriteLine($"Guess a ghost:");
+        int guessCount;
+        Console.WriteLine($"This ghost has these characteristics:");
         guessCount = Guesses(_ghost);
         Console.WriteLine($"That took you {guessCount} guesses.");
         return guessCount;
@@ -208,87 +209,47 @@ public void setHunt(){
         List<string> guesses = new List<string>();
         int guessCount = 0;
         do{
+            Data(_ghost, _ghost);
             guessCount += 1;
             guess = Console.ReadLine();
             guess = guess.ToLower();
-            Data(ghost, guess);
             guesses.Add(guess);
         }while(guess != ghost);
         return guessCount;
     }
     public override void Data(string ghost, string guess){
-            if (_ghosts.ContainsKey(guess)){
-                List<List<string>> guessStats = _ghosts[guess];
-                List<List<string>> actualStats = _ghosts[ghost];
-                if (_evidenceSetting != "0"){
-                    Console.Write($"Evidences: ");
-                    List<string> evidences = new List<string>();
-                    foreach(string evidence in guessStats[0]){
-                        if (actualStats[0].Contains(evidence))
+        List<List<string>> stats = _ghosts[_ghost];
+        Random random = new Random();
+        if (_evidenceSetting != "0"){
+            Console.Write($"Evidences: ");
+                List<string> evidences = new List<string>();
+                foreach(string evidence in stats[0]){
+                    if (!evidences.Contains(evidence))
                         {
-                            if (!evidences.Contains(evidence))
-                            {
                             evidences.Add(evidence);
-                            }
                         }
-                    }
-                    foreach(string evidence in evidences){
-                        Console.Write($"{evidence}, ");
-                    }
-                    Console.Write($"\n");
                 }
-                if (_huntSetting == "1"){
-                    Console.Write($"Max Hunt Threshold: ");
-                    int guessHunt = int.Parse(guessStats[1][0]);
-                    int actualHunt = int.Parse(actualStats[1][0]);
-                    if (guessHunt < actualHunt){
-                        Console.Write("Higher");
-                    }else if (guessHunt > actualHunt){
-                        Console.Write("Lower");
-                    }else if (guessHunt <= actualHunt){
-                        Console.Write("Same Level");
-                    }
-                    Console.Write($"\n");
+                foreach(string evidence in evidences){
+                    Console.Write($"{evidence}, ");
                 }
-                if (_speedSetting == "1"){
-                    Console.Write($"Min Speed: ");
-                    float guessMinSpeed = float.Parse(guessStats[2][0]);
-                    float actualMinSpeed = float.Parse(actualStats[2][0]);
-                    if (guessMinSpeed < actualMinSpeed){
-                        Console.Write("Higher");
-                    }else if (guessMinSpeed > actualMinSpeed){
-                        Console.Write("Lower");
-                    }else if (guessMinSpeed <= actualMinSpeed){
-                        Console.Write("Same Speed");
-                    }
-                    Console.Write($"\n");
-                    Console.Write($"Max Speed: ");
-                    float guessMaxSpeed = float.Parse(guessStats[2][1]);
-                    float actualMaxSpeed = float.Parse(actualStats[2][1]);
-                    if (guessMaxSpeed < actualMaxSpeed){
-                        Console.Write("Higher");
-                    }else if (guessMaxSpeed > actualMaxSpeed){
-                        Console.Write("Lower");
-                    }else if (guessMaxSpeed <= actualMaxSpeed){
-                        Console.Write("Same Speed");
-                    }
-                    Console.Write($"\n");
-                }
-                if (_traitSetting != "0"){
-                    Console.Write($"Traits: ");
-                    foreach(string trait in guessStats[3]){
-                        if (actualStats[3].Contains(trait))
-                        {
-                            if (trait != "None")
-                            {
-                            Console.Write($"{trait}, ");
-                            }
-                        }
-                    }
-                    Console.Write($"\n");
-                }
-            }else{
-                Console.WriteLine("Not a valid ghost.");
+                Console.Write($"\n");
+        }
+        if (_huntSetting != "2"){
+            int hunts = int.Parse(stats[1][0]);
+            int hunt = random.Next(0, hunts);
+            Console.WriteLine($"It hunted at: {hunt}");
+        }
+        if (_speedSetting != "2"){
+            float min = float.Parse(stats[2][0]);
+            float max = float.Parse(stats[2][1]);
+            float speed = min + (float)random.NextDouble() * (max - min);
+            Console.WriteLine($"It moved at this speed: {speed.ToString("0.00")}");
+        }
+        if (_evidenceSetting != "0"){
+            Console.Write($"Traits: ");
+            foreach(string trait in stats[3]){
+                    Console.Write($"{trait}, ");
             }
+        }
     }
 }

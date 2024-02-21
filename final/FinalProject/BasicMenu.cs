@@ -20,7 +20,6 @@ class BasicMenu
             {
                 string className = options[menu][1];
                 string methodName = options[menu][2];
-                results = methodName;
                 Type classType = Type.GetType(className);
                 MethodInfo methodInfo = classType.GetMethod(methodName);
                 if (methodInfo != null)

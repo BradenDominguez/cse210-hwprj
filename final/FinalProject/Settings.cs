@@ -1,9 +1,15 @@
-// abstract class Settings
+// public abstract class Settings
 // {
-//     // private string _evidenceSetting;
-//     // private string _huntSetting;
-//     // private string _speedSetting;
-//     // private string _traitSetting;
+//     protected string _evidenceSetting;
+//     protected string _huntSetting;
+//     protected string _speedSetting;
+//     protected string _traitSetting;
+//     public Settings(string evidence, string hunt, string speed, string trait){
+//     _evidenceSetting= evidence;
+//     _huntSetting = hunt;
+//     _speedSetting = speed;
+//     _traitSetting = trait;
+//     }
 //     public abstract void EvidenceSetting();
 //     public abstract void HuntSetting();
 //     public abstract void SpeedSetting();
